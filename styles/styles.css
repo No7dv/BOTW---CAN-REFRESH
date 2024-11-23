@@ -376,6 +376,12 @@ body {
     position: relative;
 }
 
+.footer__link img:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
 .span--designer{
     font-weight: 600;
     font-size: 14px;
@@ -398,19 +404,4 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-}
-/* media query banniere footer */
-@media (max-width: 768px) {
-    .banniere-footer {
-        height: 200px; /* Ajuste la hauteur pour les petits écrans */
-    }
-}
-/* media query carousel */
-@media (max-width: 768px) {
-    .swiper-container {
-        width: 100%;
-    }
-    .swiper-slide {
-        padding: 10px;
-    }
 }
