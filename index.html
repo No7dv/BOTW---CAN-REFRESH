@@ -14,6 +14,8 @@
         rel="stylesheet">
 <!-- ma feuille de style perso -->
 <link rel="stylesheet" href="styles/styles.css">
+<!-- feuille de style media query -->
+<link rel="stylesheet" href="styles/mediaquery.css">
 <!-- le script pour swiper, pour le carousel -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
@@ -67,15 +69,15 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="images/section-presentation -produit1.png"
-                            alt="présentation produit citron et gingembre"></div>
+                            alt="présentation produit citron et gingembre" loading="lazy"></div>
                     <div class="swiper-slide"><img src="images/section-presentation -produit2.png"
-                            alt="présentation produit framboise citron"></div>
+                            alt="présentation produit framboise citron" loading="lazy"></div>
                     <div class="swiper-slide"><img src="images/section-presentation -produit3.png"
-                            alt="présentation produit peche bois de sureau"></div>
+                            alt="présentation produit peche bois de sureau" loading="lazy"></div>
                 </div>
                 <!-- Navigation du carousel -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next" aria-label="slide suivante"></div>
+                <div class="swiper-button-prev" aria-label="slide précédente"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -98,7 +100,7 @@
         <section class="section__info__pub">
             <!-- pour centrer l'image des fondateurs -->
             <div class="section__info__pub__image--center">
-                <img class="section__info__pub__image" src="images/les fondateurs - banières.svg" alt="images des fondateurs de la marque">
+                <img class="section__info__pub__image" src="images/les fondateurs - banières.svg" alt="images des fondateurs de la marque">
             </div>
             <div class="section__info__pub--flexbox">
                 <div class="section__info__pub__items">
