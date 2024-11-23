@@ -1,0 +1,31 @@
+/* media query banniere footer */
+@media (max-width: 768px) {
+    .banniere-footer {
+        height: 200px; /* Ajuste la hauteur pour les petits écrans */
+    }
+}
+/* media query carousel */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 100%;
+    }
+    .swiper-slide {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar>a {
+        font-size: 14px;
+        padding: 2px 6px;
+        margin: 16px 8px;
+    }
+    .section__Home__Title {
+        font-size: 64px;
+        line-height: 92px;
+    }
+    .section__Home__Content {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
