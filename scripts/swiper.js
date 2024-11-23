@@ -20,5 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            keyboard: {
+                enabled: true,
+            },
+            mousewheel: {
+                sensitivity: 1,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            },
         });
 });
