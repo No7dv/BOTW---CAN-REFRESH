@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #1C212C;
+    --swiper-navigation-size: 30px !important;
+    --backgroundColor: rgba(255, 255, 255, 1);
+    --footerTextColor: rgba(121, 124, 134, 1);
+}
+
+body,
+html {
+    overflow: hidden;
+}
+
+body {
+    z-index: 99;
+    background: rgb(243, 126, 106);
+    background: linear-gradient(90deg,
+            rgba(243, 126, 106, 0.5) 0%,
+            rgba(229, 182, 138, 0.5) 30%,
+            rgba(216, 188, 114, 0.5) 65%,
+            rgba(205, 173, 90, 0.5) 100%);
+}
+
+.FontJost {
+    font-family: "Jost";
+}
+/* pour les formes en haut de la page */
+.round{
+    border-radius: 50%;
+}
+/* image des canettes en haut de page */
+.main__body__layout--image{
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    right: -8px;
+    top: 379px;
+}
+/* forme elipse petite au dessus des canettes du top page */
+.main__body__layout--elipse--small{
+    position: absolute;
+    z-index: -1;
+    top: 315px;
+    left: 931px;
+    /* right: 0; */
+    /* transform: translate(-159%,65%); */
+    width: 200px;
+    height: 200px;
+    background-color: rgb(233, 167, 158, 0.5);
+}
+/* forme elipse moyenne en haut à gauche en dessous du titre du top bar */
+.main__body__layout--elipse--medium{
+    position: absolute;
+    z-index: -1;
+    top: 650px;
+    left: -160px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(207, 179, 95, 0.5);
+}
+/* forme elipse gros en haut à droite du top bar */
+.main__body__layout--elipse--big{
+    position: absolute;
+    z-index: -1;
+    top: -159px;
+    left: 1084px;
+    width: 494px;
+    height: 452px;
+    background-color: rgb(243, 124, 99, 0.5);
+}
+/* drapeau français top bar */
+.main__body__layout--frenchFlag{
+    position: absolute;
+    z-index: -1;
+    top: 435px;
+    left: -70px;
+    rotate: -90deg;
+    width: 100px;
+    height: 77px;
+}
+/* la topbar de navigation fixe au top */
+.navbar--Fixed {
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* un flex + filtre blur pour les éléments passant dérrière la navbar */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .2));
+}
+/* englobe tout les liens de la navbar */
+.navbar>a {
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 32px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Fustat';
+    line-height: 24px;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+}
+/* logo kyo kombucha de la navbar */
+.navbar__Logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px 17px;
+}
+/* hover du logo de la navbar */
+.navbar__Logo:hover {
+    opacity: 0.4;
+    transform: scale(.9);
+    cursor: pointer;
+}
+/* hover des liens de la navbar */
+.navbar>a:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+/* cette section englobe le titre et les paragraphes de l'intro */
+.section__Home {
+    margin: 140px 49px 186px 49px;
+}
+/* les paragraphes du home*/
+.section__Home__Content {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 52px;
+}
+/* le titre du home */
+.section__Home__Title {
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 184px;
+}
+
+.padding--content {
+    padding: 30px 0;
+}
+
+.section__Carousel {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 37%;
+    margin-bottom: 300px;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10%;
+    border-width: 30px 15px;
+    color: var(--primaryColor) !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.1);
+    transition: transform .3s;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10%;
+    border-width: 30px 15px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primaryColor) !important;
+}
+
+.section__description {
+    font-family: "Jost";
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 583px;
+}
+
+.section__description__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+}
+
+.section__description__info {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.section__description__content {
+    margin: 0 272px 500px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.section-description__img--left {
+    position: absolute;
+    left: 76px;
+}
+
+.section-description__img--right {
+    position: absolute;
+    right: 76px;
+    rotate: 180deg;
+}
+
+.section__info__pub{
+    background-color: var(--backgroundColor);
+}
+
+.section__info__pub__image--center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__info__pub__image{
+    position: relative;
+    top: -225px;
+}
+
+.section__info__pub__video--items{
+    width: 659px;
+    height: auto;
+    margin: 0 10px 0 0;
+}
+
+.section__info__pub--flexbox{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: auto;
+}
+
+.section__info__pub--flexbox div{
+    padding-right: 80px;
+}
+
+.section__info__pub--flexbox__title{
+    margin-bottom: 36px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 69px;
+}
+
+.section__info__pub--flexbox__content-1{
+    margin-bottom: 36px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.section__info__pub--flexbox__content-2{
+    margin-bottom: 235px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.section__info__pub__items{
+    margin-left: 41px;
+    text-align: center;
+}
+
+/* c'est les images de couleurs, orange, bleu, vert et jaune */
+.section__illustration{
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 34px;
+    padding: 0 249px 181px;
+    margin-bottom: 181px;
+}
+/* c'est la bannière qui montre le déroulement de production */
+.section__production{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
+/* c'est l'image des canettes qui passe derrière les éléments */
+.background__can-footer {
+    z-index: 1;
+    position: relative;
+    background-image: url(../images/bgbgbg.svg);
+    background-size: cover;
+    /* L'image occupe tout l'écran */
+    background-position: center bottom;
+    /* Aligne l'image au centre horizontalement et en bas verticalement */
+    background-attachment: fixed;
+    /* Effet parallaxe */
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.banniere-footer {
+    background-image: url(../images/bannierenouveau.svg);
+    background-size: cover; /* L'image couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image horizontalement et verticalement */
+    background-repeat: no-repeat; /* Pas de répétition */
+    width: 100%; /* La bannière prend toute la largeur de l'écran */
+    height: 338px; /* Ajuste la hauteur (modifie selon tes besoins) */
+    overflow: hidden; /* Coupe tout contenu débordant */
+    position: relative;
+    display: flex; /* Permet de centrer du contenu si nécessaire */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--primaryColor);
+    padding: 34px 80px;
+    align-items: center;
+}
+
+.footer__content--botw{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--footerTextColor);
+}
+
+.footer__content--copyright{
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--footerTextColor);
+}
+
+.border--right{
+    border-right: 1px solid var(--primaryColor);
+    margin-left: 8px;
+}
+
+.bold{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.footer__link{
+    border: 1px solid var(--primaryColor);
+    border-radius: 100px;
+    padding: 8px;
+    gap: 8px;
+    height: 54px;
+    width: 146px;
+    left: 74px;
+    position: relative;
+}
+
+.span--designer{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.span--yukina{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.span--sept{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.span--whitespace{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+/* media query banniere footer */
+@media (max-width: 768px) {
+    .banniere-footer {
+        height: 200px; /* Ajuste la hauteur pour les petits écrans */
+    }
+}
+/* media query carousel */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 100%;
+    }
+    .swiper-slide {
+        padding: 10px;
+    }
+}

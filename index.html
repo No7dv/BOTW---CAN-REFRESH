@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- lien pour les fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+<!-- ma feuille de style perso -->
+<link rel="stylesheet" href="styles/styles.css">
+<!-- le script pour swiper, pour le carousel -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+<!-- mon script js swiper -->
+<script src="scripts/swiper.js" defer></script>
+<!--script lenis smooth scroll-->
+<script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js" defer></script>
+<script src="scripts/lenis.js" defer></script>
+    <title>KYO KOMBUCHA</title>
+</head>
+
+<body>
+    <header id="link__navbar">
+        <!-- positionnement fixe pour la navbar -->
+        <div class="navbar--Fixed">
+            <nav class="navbar">
+                <div class="navbar__Logo">
+                    <img src="images/logo.png" alt="Logo de la marque KYO Kombucha">
+                </div>
+                <!-- liens de la navbar -->
+                <a href="#link__navbar" title="Home">Home</a>
+                <a href="#section__carousel" title="NosKombuchas">Nos Kombuchas</a>
+                <a href="#section__about" title="AboutUs">Notre Histoire</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- div pour les formes, drapeaux et images en haut de page -->
+        <div class="main__body__layout">
+            <img class="main__body__layout--image" src="images/can body.png">
+            <div class="main__body__layout--elipse--small round"></div>
+            <div class="main__body__layout--elipse--medium round"></div>
+            <div class="main__body__layout--elipse--big round"></div>
+            <img class="main__body__layout--frenchFlag" src="images/banner-flat-france.png" alt="drapeaux français">
+
+        </div>
+        <!-- section home, paragraphe, titre -->
+        <section class="section__Home">
+            <p class="section__Home__Content FontJost padding--content">Votre nouvelle boisson - <strong>Été 2025</strong>
+            </p>
+            <h1 class="section__Home__Title FontJost">KYO<br />KOMBUCHA</h1>
+            <p class="section__Home__Subcontent FontJost padding">
+                THÉ FERMENTÉ ARTISANAL & BIO<br />
+                BOISSONS PÉTILLANTES SANS ALCOOL<br />
+                MADE IN STRASBOURG
+            </p>
+        </section>
+        <!-- section carousel avec 3 fiches -->
+        <section id="section__carousel" class="section__Carousel">
+            <!-- Structure Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/section-presentation -produit1.png"
+                            alt="présentation produit citron et gingembre"></div>
+                    <div class="swiper-slide"><img src="images/section-presentation -produit2.png"
+                            alt="présentation produit framboise citron"></div>
+                    <div class="swiper-slide"><img src="images/section-presentation -produit3.png"
+                            alt="présentation produit peche bois de sureau"></div>
+                </div>
+                <!-- Navigation du carousel -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- section description, image pour les bordures + titre et paragraphe -->
+        <section id="section__about" class="section__description">
+            <div class="section__description--border">
+                <img src="images/Vector 2.svg" class="section-description__img--left" alt="">
+                <img src="images/Vector 2.svg" class="section-description__img--right" alt="">
+                <h4 class="section__description__title">KYO KOMBUCHA</h4>
+                <h5 class="section__description__info">100% ARTISANAL</h5>
+                <p class="section__description__content">
+                    Un thé vert qui fermente pendant 10 à 15 jours, sous l'œil attentif de nos experts en thé. C'est une
+                    fermentation douce et naturelle qui donne une boisson pétillante et légère en calories. On y ajoute
+                    des
+                    jus frais, des infusions ou des macérations faites à la brasserie.
+                </p>
+            </div>
+        </section>
+        <!-- section informations et pub -->
+        <section class="section__info__pub">
+            <!-- pour centrer l'image des fondateurs -->
+            <div class="section__info__pub__image--center">
+                <img class="section__info__pub__image" src="images/les fondateurs - banières.svg" alt="images des fondateurs de la marque">
+            </div>
+            <div class="section__info__pub--flexbox">
+                <div class="section__info__pub__items">
+                    <h1 class="FontJost section__info__pub--flexbox__title">NOUS C'EST FRÉRÉRIQUE ET OLIVIER</h1>
+                    <p class="FontJost section__info__pub--flexbox__content-1">ET ON VA VOUS RACONTER COMMENT ON EN ARRIVE À DEVENIR BRASSEUR DE THÉ</p>
+                    <p class="FontJost section__info__pub--flexbox__content-2">
+                        Alors, oui, c’est sûr qu’on est loin du cliché des amis d’enfance qui trouve l’inspiration pour monter leur boite au
+                        détour de leur dernier échange Erasmus.
+                    </p>
+                </div>
+                <video class="section__info__pub__video--items" src="images/video notre histoire.mp4" controls width="300"></video>
+            </div>
+        </section>
+        <article class="background__can-footer">
+            <section class="section__illustration">
+                <img src="images/icono2.svg" alt="illustration orange kyo">
+                <img src="images/icono3.svg" alt="illustration bleu kyo">
+                <img src="images/icono4.svg" alt="illustration vert kyo">
+                <img src="images/icono1.svg" alt="illustration jaune kyo">
+            </section>
+
+            <section class="section__production">
+                <img src="images/illustration-production.svg" alt="">
+            </section>
+        </article>
+        <div class="banniere-footer"></div>
+    </main>
+    <!-- footer, avec liens réseaux sociaux -->
+    <footer class="footer">
+        <p class="footer__content--botw FontJost">BOTW -  CAN REFRESH<span class="border--right"></span></p>
+        <nav class="footer__link">
+            <a href="#"><img src="images/facebook.png" alt="logo facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="logo twitter"></a>
+            <a href="#"><img src="images/linkedin.png" alt="logo linkedin"></a>
+        </nav>
+        <p class="footer__content--copyright FontJost"><span class="span--whitespace">© 2024</span> <span class="span--designer">DESIGNER</span> <span class="span--yukina">YUKINA</span>  <span class="span--designer">DEVELOPPER</span> <span class="span--sept">N°7</span>.</p>
+    </footer>
+</body>
+
+</html>
