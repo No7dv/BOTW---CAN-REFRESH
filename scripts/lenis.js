@@ -1,4 +1,6 @@
 const lenis = new Lenis({
+  smooth:true,
+  duration:1.2,
   lerp: 0.1,
   smoothWheel: true,
   smoothTouch: true,
